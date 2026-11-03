@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://digital-tricksters001.github.io/vivid-lang/sitemap.xml
