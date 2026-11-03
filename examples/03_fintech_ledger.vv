@@ -1,0 +1,42 @@
+module FintechLedger;
+
+intent AuditCompliance {
+    vibe: "Bank-grade, unalterable, double-entry, strictly consistent"
+    actors: [System, ComplianceOfficer]
+    sla: 50ms
+}
+
+model LedgerEntry {
+    id: UUID
+    account_id: UUID
+    debit_cents: Int >= 0
+    credit_cents: Int >= 0
+    timestamp: Timestamp
+}
+
+guard BalanceSheetSafety {
+    ensure total_debits == total_credits
+    ensure total_debits >= 0
+    never allow_unbalanced_journals()
+    never allow_negative_balance()
+}
+
+lens LedgerMonitor(entries: LedgerEntry[]) {
+    theme: "audit-dark"
+    surface {
+        title: "Immutable Transaction Ledger"
+        status: "Balanced"
+        reconcile_action: action("Run Automated Audit")
+    }
+}
+
+realize @ledger_poster {
+    flow post_journal(entries: LedgerEntry[]) -> Result<JournalId, Error> {
+        atomic {
+            guard BalanceSheetSafety(entries)
+            let journal_id = vault.append_entry(entries)
+            emit JournalCommitted(journal_id)
+            return ok(journal_id)
+        }
+    }
+}

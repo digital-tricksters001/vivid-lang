@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Vivid",
+  "scopeName": "source.vv",
+  "fileTypes": ["vv", "vivid"],
+  "patterns": [
+    {
+      "name": "comment.line.double-slash.vivid",
+      "match": "//.*$"
+    },
+    {
+      "name": "comment.block.vivid",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    {
+      "name": "string.quoted.double.vivid",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [{ "name": "constant.character.escape.vivid", "match": "\\\\." }]
+    },
+    {
+      "name": "entity.name.tag.sna.vivid",
+      "match": "@[a-zA-Z0-9_#\\-]+"
+    },
+    {
+      "name": "keyword.declaration.vivid",
+      "match": "\\b(module|intent|guard|model|lens|realize|store|flow)\\b"
+    },
+    {
+      "name": "keyword.control.vivid",
+      "match": "\\b(ensure|never|require|sla|atomic|let|return|emit|if|else)\\b"
+    },
+    {
+      "name": "support.type.primitive.vivid",
+      "match": "\\b(Int|Text|UUID|Boolean|Timestamp|Result|Error|Void|Map|Set)\\b"
+    },
+    {
+      "name": "constant.numeric.vivid",
+      "match": "\\b[0-9]+(\\.[0-9]+)?(ms|s)?\\b"
+    },
+    {
+      "name": "keyword.operator.vivid",
+      "match": "(->|=>|==|!=|<=|>=|=|<|>|\\+|\\-|\\*|\\/)"
+    }
+  ]
+}

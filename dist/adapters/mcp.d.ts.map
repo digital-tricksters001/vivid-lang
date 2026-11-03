@@ -1,0 +1,1 @@
+{"version":3,"file":"mcp.d.ts","sourceRoot":"","sources":["../../src/adapters/mcp.ts"],"names":[],"mappings":"AAAA;;;;;GAKG;AAOH,qBAAa,cAAc;IACzB,OAAc,cAAc,CAAC,QAAQ,EAAE,MAAM,EAAE,IAAI,EAAE,MAAM,CAAC,MAAM,EAAE,GAAG,CAAC,GAAG,GAAG,CA0C7E;IAED,OAAc,SAAS;;;;;;;oBAOa,IAAI;;;;;;;;;;;;;;;oBAUhB,IAAI;;;oBACR,IAAI;;;;;;;;;;;;;;;oBAWA,IAAI;;;oBACL,IAAI;;;oBACJ,IAAI;;;;;SAM1B;CACF"}

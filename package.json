@@ -1,0 +1,48 @@
+{
+  "name": "vivid-lang",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "The Semantic Programming Language & Reactive Runtime Engineered for the Vibe Coding Era.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "vivid": "./bin/vivid.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node bin/vivid.js serve",
+    "test": "node --test tests/*.test.js || ts-node tests/runner.ts || node tests/run.js",
+    "verify": "node bin/vivid.js verify examples/01_saas_checkout.vv",
+    "studio": "node bin/vivid.js serve --port 4173"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-tricksters001/vivid-lang.git"
+  },
+  "keywords": [
+    "vibe-coding",
+    "ai-native",
+    "compiler",
+    "programming-language",
+    "reactive-runtime",
+    "semantic-node-addressing",
+    "mcp",
+    "self-healing",
+    "invariants",
+    "pulse-engine"
+  ],
+  "author": "Suman Kumar Das <info@digital-tricksters.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digital-tricksters001/vivid-lang/issues"
+  },
+  "homepage": "https://github.com/digital-tricksters001/vivid-lang#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,46 @@
+module AmbientKanban;
+
+intent TeamCollaboration {
+    vibe: "Fluid, low-latency, multiplayer, zero-friction"
+    actors: [Member, Admin]
+    sla: 120ms
+}
+
+model TaskCard {
+    id: UUID
+    title: Text
+    status: Text
+    assignee: Text
+    points: Int >= 0
+}
+
+guard KanbanIntegrity {
+    ensure cards.length >= 0
+    never allow_duplicate_ids()
+    require valid_team_membership(Member)
+}
+
+store BoardStore {
+    persisted columns: TaskCard[]
+    ephemeral active_collaborators: Text[]
+    sync: [collaborative, encrypted]
+}
+
+lens BoardView(store: BoardStore) {
+    theme: "cyber-slate"
+    surface {
+        title: "Sprint Workspace"
+        active_users: "{store.active_collaborators.length} online"
+        add_card: action("Create Task")
+    }
+}
+
+realize @kanban_mutation {
+    flow move_card(card_id: UUID, new_status: Text) -> Result<Void, Error> {
+        atomic {
+            update_card_status(card_id, new_status)
+            emit CardRelocated(card_id, new_status)
+            return ok()
+        }
+    }
+}
