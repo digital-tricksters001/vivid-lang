@@ -229,4 +229,4 @@ Vivid is **free for non-commercial use** (hobbyists, students, educational insti
 - **Copyright © 2026 Suman Kumar Das. All Rights Reserved.**
 - **Non-Commercial License:** Free under the [Vivid Community License](LICENSE).
 - **Commercial Licensing:** Any commercial use or deployment is sold exclusively by **Suman Kumar Das**.
-- **Commercial Inquiries:** [info@digital-tricksters.com](mailto:info@digital-tricksters.com) | [GitHub Profile](https://github.com/digital-tricksters001)
+- **Commercial Inquiries:** [fysuman20@gmail.com](mailto:fysuman20@gmail.com) | [GitHub Profile](https://github.com/digital-tricksters001)

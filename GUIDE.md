@@ -2,7 +2,7 @@
 
 **Author:** Suman Kumar Das  
 **License:** Free for Non-Commercial Use • Commercial Licenses Sold Exclusively by Suman Kumar Das  
-**Inquiries:** [info@digital-tricksters.com](mailto:info@digital-tricksters.com)  
+**Inquiries:** [fysuman20@gmail.com](mailto:fysuman20@gmail.com)  
 
 ---
 
@@ -195,5 +195,5 @@ Pass this object directly to your AI model to auto-generate a surgical SNA patch
 Remember: Vivid is **free for non-commercial and learning use**. For commercial SaaS deployments, production agent swarms, or closed-source enterprise software, contact:
 
 - **Author & Copyright Holder:** Suman Kumar Das
-- **Email:** [info@digital-tricksters.com](mailto:info@digital-tricksters.com)
+- **Email:** [fysuman20@gmail.com](mailto:fysuman20@gmail.com)
 - **Commercial Details:** Read [COMMERCIAL.md](COMMERCIAL.md)

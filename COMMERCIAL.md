@@ -2,7 +2,7 @@
 
 **Copyright © 2026 Suman Kumar Das. All Rights Reserved.**  
 **Creator & Sole Commercial Licensor:** Suman Kumar Das  
-**Inquiries:** [info@digital-tricksters.com](mailto:info@digital-tricksters.com) | [GitHub](https://github.com/digital-tricksters001)
+**Inquiries:** [fysuman20@gmail.com](mailto:fysuman20@gmail.com) | [GitHub](https://github.com/digital-tricksters001)
 
 ---
 
@@ -39,7 +39,7 @@ The **Vivid Programming Language** and **Pulse Runtime** are distributed under a
 
 To obtain a customized commercial quote, license agreement, or invoice:
 
-1. **Email:** [info@digital-tricksters.com](mailto:info@digital-tricksters.com)
+1. **Email:** [fysuman20@gmail.com](mailto:fysuman20@gmail.com)
 2. **Subject:** `[Vivid Commercial License Request] - <Your Company Name>`
 3. **Please Include:**
    - Company name and website
