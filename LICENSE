@@ -1,21 +1,56 @@
-MIT License
+Vivid Community & Commercial Source License (v1.0)
+Copyright (c) 2026 Suman Kumar Das. All Rights Reserved.
 
-Copyright (c) 2026 Suman Kumar Das
+Developer & Copyright Owner: Suman Kumar Das
+Contact: info@digital-tricksters.com
+Website: https://github.com/digital-tricksters001/vivid-lang
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+==============================================================================
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+==============================================================================
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. GRANT OF FREE NON-COMMERCIAL LICENSE
+Subject to the terms and conditions of this License, Suman Kumar Das hereby 
+grants to you a perpetual, worldwide, non-exclusive, no-charge, royalty-free 
+copyright license to reproduce, prepare derivative works of, publicly display, 
+publicly perform, and distribute the Software and its derivative works, SOLELY 
+for Non-Commercial Purposes.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+"Non-Commercial Purposes" means:
+(a) Personal, hobbyist, and educational use;
+(b) Academic, scientific, and open research;
+(c) Internal evaluation and testing without deployment into production or 
+    revenue-generating environments;
+(d) Development of open-source software distributed freely under identical 
+    or compatible non-commercial terms.
+
+2. COMMERCIAL USE RESERVATION
+ANY COMMERCIAL USE, PRODUCTION DEPLOYMENT, OR REVENUE-GENERATING INTEGRATION 
+OF THIS SOFTWARE IS STRICTLY RESERVED EXCLUSIVELY TO SUMAN KUMAR DAS.
+
+You may NOT:
+(a) Use the Software or any derivative works in a commercial production environment;
+(b) Embed, bundle, or distribute the Software within a paid commercial product, 
+    SaaS, PaaS, or cloud platform;
+(c) Charge fees for access to services directly powered by the Software;
+(d) Sub-license, sell, lease, or commercially monetize the Software in any form.
+
+3. COMMERCIAL LICENSING INQUIRIES
+Commercial and Enterprise licenses are sold exclusively by the author and 
+copyright holder, Suman Kumar Das. To acquire a commercial license, enterprise 
+support agreement, or custom proprietary deployment rights, please contact:
+Email: info@digital-tricksters.com
+GitHub: https://github.com/digital-tricksters001
+
+4. ATTRIBUTION & INTEGRITY
+All copies or substantial portions of the Software must retain the above 
+copyright notice, this license notice, and explicit attribution to 
+Suman Kumar Das.
+
+5. DISCLAIMER OF WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL 
+SUMAN KUMAR DAS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER 
+IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN 
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

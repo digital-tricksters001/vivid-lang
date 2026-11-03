@@ -13,13 +13,14 @@
 
 ### The Semantic Programming Language & Reactive Runtime Engineered for the Vibe Coding Era
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
+[![License: Free for Non-Commercial](https://img.shields.io/badge/License-Free%20for%20Non--Commercial-emerald.svg)](LICENSE)
+[![Commercial License](https://img.shields.io/badge/Commercial%20Use-Sold%20by%20Suman%20Kumar%20Das-blue.svg)](COMMERCIAL.md)
 [![Node Version](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-cyan.svg)](https://nodejs.org)
 [![Universal AI](https://img.shields.io/badge/AI%20Compatibility-Universal%20(OpenAI%20%7C%20Claude%20%7C%20DeepSeek%20%7C%20Ollama)-purple.svg)](#universal-ai-connectivity)
-[![Model Context Protocol](https://img.shields.io/badge/MCP-Native%20Server-blue.svg)](#cursor--windsurf-mcp-integration)
+[![Model Context Protocol](https://img.shields.io/badge/MCP-Native%20Server-teal.svg)](#cursor--windsurf-mcp-integration)
 [![Developer](https://img.shields.io/badge/Author-Suman%20Kumar%20Das-10b981.svg)](https://github.com/digital-tricksters001)
 
-[**Live Interactive Studio**](https://digital-tricksters001.github.io/vivid-lang) • [**Language Specification**](SPECIFICATION.md) • [**Examples**](examples/) • [**Report Issue**](https://github.com/digital-tricksters001/vivid-lang/issues)
+[**Live Interactive Studio**](https://digital-tricksters001.github.io/vivid-lang) • [**Developer Guide**](GUIDE.md) • [**Language Specification**](SPECIFICATION.md) • [**Commercial Licensing**](COMMERCIAL.md) • [**Launch Kit**](LAUNCH.md)
 
 </div>
 
@@ -27,7 +28,7 @@
 
 ## The Problem with Traditional Code in the AI Era
 
-Traditional programming languages (TypeScript, Python, Rust, Go) were designed for manual human typing character-by-character:
+Traditional programming languages (TypeScript, Python, Rust, Go) were built for human typing character-by-character:
 - **Token Tax:** Up to 60% of LLM context windows are consumed by ceremony (imports, type plumbing, serializations, `useEffect` dependencies).
 - **Diff & Patch Fragility:** Line-based search-and-replace patches fail frequently when LLMs hallucinate surrounding indentation or closing brackets.
 - **Intent Erosion:** High-level architectural rules, performance SLAs, and business invariants disappear into informal comments that compilers discard.
@@ -58,6 +59,12 @@ model CartItem {
     name: Text
     cents: Int > 0
     qty: Int >= 1
+}
+
+model Buyer {
+    id: UUID
+    email: Text
+    payment_method: Text
 }
 
 // 3. FORMAL INVARIANTS (Verified statically & at runtime)
@@ -144,30 +151,11 @@ Vivid is designed to interface natively with **any** AI model:
 
 ---
 
-## Interactive Web Studio & Playground
+## How to Use Vivid (Complete Guide)
 
-Vivid includes an interactive dark-mode Web Studio:
+For the full end-to-end tutorial, see [**GUIDE.md**](GUIDE.md).
 
-```bash
-# Launch the interactive Vivid Studio locally
-npx vivid serve
-```
-
-```
-> http://localhost:4173
-```
-
-- **Live Code Editor:** Real-time syntax feedback on `.vv` files.
-- **Vibe Prompt Bar:** Describe requirements in plain English and synthesize AST nodes on the fly.
-- **SNA Graph Inspector:** Live visualization of content hashes and dependency links.
-- **Invariant Fault Simulator & Auto-Heal:** Trigger edge-case faults and watch Vivid self-heal.
-- **Pulse Live Lens:** Live preview of reactive user interfaces.
-
----
-
-## CLI Quickstart
-
-### Installation
+### 1. Installation
 ```bash
 git clone https://github.com/digital-tricksters001/vivid-lang.git
 cd vivid-lang
@@ -175,17 +163,17 @@ npm install
 npm run build
 ```
 
-### Run a Vivid Program
+### 2. Run a Vivid Program
 ```bash
 node bin/vivid.js run examples/01_saas_checkout.vv
 ```
 
-### Verify Invariants
+### 3. Verify Invariant Safety
 ```bash
 node bin/vivid.js verify examples/01_saas_checkout.vv
 ```
 
-### Cursor & Windsurf MCP Integration
+### 4. Cursor & Windsurf MCP Integration
 Add Vivid to your Cursor or Claude Desktop MCP configuration (`mcpServers`):
 ```json
 {
@@ -197,65 +185,48 @@ Add Vivid to your Cursor or Claude Desktop MCP configuration (`mcpServers`):
   }
 }
 ```
-Your AI assistant can now natively inspect the AST, query node hashes, and apply surgical patches.
 
----
-
-## Project Structure
-
-```
-vivid-lang/
-├── bin/
-│   └── vivid.js                   # CLI Tool (run, verify, serve, mcp)
-├── src/
-│   ├── core/
-│   │   ├── ast.ts                 # Formal AST Types
-│   │   ├── lexer.ts               # Tokenizer for .vv files
-│   │   ├── parser.ts              # Semantic AST Parser
-│   │   ├── sna.ts                 # Semantic Node Addressing Engine
-│   │   ├── invariants.ts          # Guard & Invariant Verifier
-│   │   └── marp.ts                # Machine-Actionable Repair Packet Engine
-│   ├── runtime/
-│   │   └── pulse.ts               # Pulse Execution & Lens Engine
-│   ├── adapters/
-│   │   ├── base.ts                # Universal Provider Interface
-│   │   ├── universal.ts           # OpenAI, Claude, DeepSeek, Ollama Dispatcher
-│   │   └── mcp.ts                 # Model Context Protocol (MCP) Server
-│   └── web/                       # Interactive Web Studio
-│       ├── index.html             # High-aesthetic Studio UI
-│       ├── app.js                 # Reactive browser compiler
-│       ├── styles.css             # Glassmorphism design system
-│       └── samples.js             # Showcase templates
-├── examples/                      # Real-world .vv programs
-├── syntaxes/
-│   └── vivid.tmLanguage.json      # VS Code / Cursor Syntax Grammar
-├── tests/
-│   └── vivid.test.js              # Unit Test Suite
-├── SPECIFICATION.md               # Formal Language Spec
-└── LICENSE                        # MIT License
-```
-
----
-
-## Running Tests
-
+### 5. Launch the Web Studio Locally
 ```bash
-npm test
+npm run studio
+# Open http://localhost:4173 in your browser
 ```
-
-All 5 core engine test suites verify:
-- Lexer tokenization of Vivid keywords and SNA addresses
-- AST parser construction and module resolution
-- Invariant verification and MARP report generation
-- Surgical semantic patching via SNA hashes
-- Universal AI adapter synthesis
 
 ---
 
-## Author & Credits
+## Interactive Web Studio & Playground
 
-Designed and engineered by **Suman Kumar Das**  
-GitHub: [@digital-tricksters001](https://github.com/digital-tricksters001)  
-Email: [info@digital-tricksters.com](mailto:info@digital-tricksters.com)
+Try Vivid directly in your browser without installing anything:
 
-Distributed under the **MIT License**.
+👉 **[https://digital-tricksters001.github.io/vivid-lang](https://digital-tricksters001.github.io/vivid-lang)**
+
+- **Live Code Editor:** Real-time syntax feedback on `.vv` files.
+- **Vibe Prompt Bar:** Describe requirements in plain English and synthesize AST nodes on the fly.
+- **SNA Graph Inspector:** Live visualization of content hashes and dependency links.
+- **Invariant Fault Simulator & Auto-Heal:** Trigger edge-case faults and watch Vivid self-heal.
+- **Pulse Live Lens:** Live preview of reactive user interfaces.
+
+---
+
+## SEO & LLM Frequently Asked Questions (FAQ)
+
+### What makes Vivid different from TypeScript or Python?
+Traditional languages require developers to manually write and maintain types, import declarations, and runtime plumbing. Vivid introduces **Dual-Layer Programming**: humans write high-level intent (`intent`) and safety contracts (`guard`), while AI agents generate and maintain content-addressed execution flows (`realize`, `flow`).
+
+### How does Semantic Node Addressing (SNA) prevent hallucinated merge conflicts?
+Unlike traditional Git diffs that operate on text lines, SNA assigns an immutable SHA-256 hash to every AST node. When an AI edits code, it targets node hashes directly. Surrounding code, whitespace, and brackets are left completely untouched.
+
+### Can Vivid be used with local LLMs offline?
+Yes! Vivid includes built-in adapters for **Ollama**, allowing offline synthesis with local open-weights models like Qwen 2.5 Coder, Llama 3, and Mistral without sending any code to external clouds.
+
+### What are the licensing terms for Vivid?
+Vivid is **free for non-commercial use** (hobbyists, students, educational institutions, researchers, and open evaluation). Commercial deployment, SaaS hosting, and production enterprise integration rights are sold exclusively by **Suman Kumar Das**. See [COMMERCIAL.md](COMMERCIAL.md) for details.
+
+---
+
+## Copyright & Commercial Licensing
+
+- **Copyright © 2026 Suman Kumar Das. All Rights Reserved.**
+- **Non-Commercial License:** Free under the [Vivid Community License](LICENSE).
+- **Commercial Licensing:** Any commercial use or deployment is sold exclusively by **Suman Kumar Das**.
+- **Commercial Inquiries:** [info@digital-tricksters.com](mailto:info@digital-tricksters.com) | [GitHub Profile](https://github.com/digital-tricksters001)
